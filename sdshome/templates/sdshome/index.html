@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Developers Society</title>
+<meta name="description" content="Student Developers Society is a community aiming to bridge the gap between students and professionals and make the students industry ready">
+<meta name="author" content="Student Developers Society">
+<meta name="keywords" content="SDS, StuDevSoc, Student Developers Society, SDS Cochin, StuDevSoc Kochi, Student Developers Society Kochi, SDS community, StuDevSoc Team, Student Developers" />
+
+{% load static %}
+<!-- Favicons
+
+    ================================================== -->
+<link rel="shortcut icon" href="{% static 'sdshome/img/favicon.png' %}" type="image/x-icon">
+<link rel="apple-touch-icon" href="{% static 'sdshome/img/apple-touch-icon.png' %}">
+<link rel="apple-touch-icon" sizes="72x72" href="{% static 'sdshome/img/apple-touch-icon-72x72.png' %}">
+<link rel="apple-touch-icon" sizes="114x114" href="{% static 'sdshome/img/apple-touch-icon-114x114.png' %}">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="{% static 'sdshome/fonts/font-awesome/css/font-awesome.css' %}">
+<link rel="stylesheet" type="text/css"  href="{% static 'sdshome/css/bootstrap.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<!-- Slider
+    ================================================== -->
+<link href="{% static 'sdshome/css/owl.carousel.css' %}" rel="stylesheet" media="screen">
+<link href="{% static 'sdshome/css/owl.theme.css' %}" rel="stylesheet" media="screen">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="{% static 'sdshome/css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'sdshome/css/nivo-lightbox/nivo-lightbox.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'sdshome/css/nivo-lightbox/default.css' %}">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300" rel="stylesheet" type="text/css">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<!-- Navigation
+    ==========================================-->
+<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand page-scroll" href="#page-top"><img src="{% static 'sdshome/img/logo.png' %}" class="img-responsive" style= "height: 35px;" alt="Logo"></a> </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about" class="page-scroll">About</a></li>
+        <li><a href="https://blog.studevsoc.com/" class="page-scroll">Blog</a></li>
+        <li><a href="events/" class="page-scroll">Events</a></li>
+        <li><a href="#services" class="page-scroll">Activities</a></li>
+        <li><a href="#portfolio" class="page-scroll">Gallery</a></li>
+        <li><a href="#team" class="page-scroll">Core Team</a></li>
+        <li><a href="#contact" class="page-scroll">Contact</a></li>
+          <li><a href="#JoinUs" class="page-scroll">Join Us</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<!-- Header -->
+<header id="header">
+  <div class="intro">
+    <div class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="intro-text"> <span>Welcome to</span>
+             <h1>Student Developers Society</h1>
+            <p>A vibrant community of student developers and professionals.<br></p>
+            <a href="#about" class="btn btn-custom btn-lg page-scroll">Learn More</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- About Section -->
+<div id="about">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2>About Us</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6"> <img src="{% static 'sdshome/img/about-min.png' %}" class="img-responsive" alt=""> </div>
+      <div class="col-xs-12 col-md-6">
+        <div class="about-text">
+          <h3>Student Developers Society</h3>
+          <p>We are a community with a vision to bridge the gap between students and professionals. Our mission is to make students industry ready by helping them achieve professionalism.<br>
+          We actively conduct workshops and interactive sessions to help aid us in fulfilling our mission. We were one of the organizing communities of the first ever Rails Girls Kochi workshop along with Kerala Ruby Community. We are turning a year old and so far, the journey has been sweet. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Services Section -->
+<div id="services" class="text-center">
+  <div class="container">
+    <div class="col-md-10 col-md-offset-1 section-title">
+      <h2>Things We Can Do</h2>
+      <hr>
+      <p>We conduct a range of activities to help the community become more tech savvy. Check them out.</p>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 col-md-3"> <i class="fa fa-comments-o"></i>
+ <h4>NETWORKING</h4>
+
+        <p>Participate in meetups and workshops conducted in association with different communities to get to know interesting people while picking up new skills along the way.</p>
+      </div>
+      <div class="col-xs-6 col-md-3"> <i class="fa fa-bullhorn"></i>
+        <h4>OPEN SOURCE DEV.</h4>
+        <p>We are advocates of open source. Join us in events like Open Source Kerala to learn some interesting stuff about open source and be a part of other cool communities as well.</p>
+      </div>
+      <div class="col-xs-6 col-md-3"> <i class="fa fa-group"></i>
+        <h4>MEETUPS</h4>
+        <p>Get involved in meetups of a wonderful community of developers and aspiring developers to share ideas and to know about the best practices in the development world.</p>
+      </div>
+      <div class="col-xs-6 col-md-3"> <i class="fa fa-magic"></i>
+        <h4>SKILL ENHANCEMENT</h4>
+        <p>Join in on our workshops, talks, interactive sessions and a lot more to pick up a new skill or to enhance your skill through our well educated instructors.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Portfolio Section -->
+<div id="portfolio">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2>At A Glance</h2>
+      <hr>
+      <p>Checkout our gallery to see some sweet moments in the journey so far.</p>
+    </div>
+    <div class="categories">
+      <ul class="cat">
+        <li>
+          <ol class="type">
+            <li><a href="#" data-filter="*" class="active">All</a></li>
+            <li><a href="#" data-filter=".lorem">Events</a></li>
+            <li><a href="#" data-filter=".adipiscing">Team</a></li>
+            <li><a href="#" data-filter=".dolor">Misc</a></li>
+          </ol>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+    <div class="row">
+      <div class="portfolio-items">
+        <div class="col-sm-6 col-md-3 col-lg-3 dolor">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static 'sdshome/img/portfolio/rr.jpg' %}" title="Event" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Events</h4>
+              </div>
+              <img src="{% static 'sdshome/img/portfolio/1rr.jpg' %}" class="img-responsive" alt="Event"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 adipiscing">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static 'sdshome/img/portfolio/02-team.jpg' %}" title="Team" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Team</h4>
+              </div>
+              <img src="{% static 'sdshome/img/portfolio/02-team1.jpg' %}" class="img-responsive" alt="Team"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 adipiscing">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static 'sdshome/img/portfolio/01-team.jpg' %}" title="Team" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Team</h4>
+              </div>
+              <img src="{% static 'sdshome/img/portfolio/01-team1.jpg' %}" class="img-responsive" alt="Team"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 dolor">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static 'sdshome/img/portfolio/event4.jpg' %}" title="Event" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Event</h4>
+              </div>
+              <img src="{% static 'sdshome/img/portfolio/1event4.jpg' %}" class="img-responsive" alt="Event"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 adipiscing">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static 'sdshome/img/portfolio/03-team.jpeg' %}" title="Team" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Team</h4>
+              </div>
+              <img src="{% static 'sdshome/img/portfolio/03-team1.jpeg' %}" class="img-responsive" alt="Team"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 lorem">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static 'sdshome/img/portfolio/event3.jpg' %}" title="Event" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Event</h4>
+              </div>
+              <img src="{% static 'sdshome/img/portfolio/1event3.jpg' %}" class="img-responsive" alt="Event"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 dolor">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static 'sdshome/img/portfolio/event3.jpeg' %}" title="Event" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Event</h4>
+              </div>
+              <img src="{% static 'sdshome/img/portfolio/12event3.jpeg' %}" class="img-responsive" alt="Event"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 lorem">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static 'sdshome/img/portfolio/event.jpg' %}" title="Event" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Event</h4>
+              </div>
+              <img src="{% static 'sdshome/img/portfolio/1event.jpg' %}" class="img-responsive" alt="event"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 lorem">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static 'sdshome/img/portfolio/event2.jpg' %}" title="Event" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Event</h4>
+              </div>
+              <img src="{% static 'sdshome/img/portfolio/1event2.jpg' %}" class="img-responsive" alt="Event"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 adipiscing">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static 'sdshome/img/portfolio/team3.jpg' %}" title="Team" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Team</h4>
+              </div>
+              <img src="{% static 'sdshome/img/portfolio/team34.jpg' %}" class="img-responsive" alt="Team"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 dolor">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static 'sdshome/img/portfolio/rr34.jpg' %}" title="Event" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Event</h4>
+              </div>
+              <img src="{% static 'sdshome/img/portfolio/1rr34.jpg' %}" class="img-responsive" alt="Event"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 lorem">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{% static 'sdshome/img/portfolio/team7.jpg' %}" title="Event" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Event</h4>
+              </div>
+              <img src="{% static 'sdshome/img/portfolio/1team7.jpg' %}" class="img-responsive" alt="Event"> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Achievements Section
+<div id="achievements" class="text-center">
+  <div class="overlay">
+    <div class="container">
+      <div class="section-title center">
+        <h2>Current Stats</h2>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-3">
+          <div class="achievement-box"> <span class="count">539</span>
+            <h4>Developers</h4>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <div class="achievement-box"> <span class="count">22</span>
+            <h4>Organizers</h4>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <div class="achievement-box"> <span class="count">11</span>
+            <h4>Meetups</h4>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <div class="achievement-box"> <span class="count">323</span>
+            <h4>Days</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
+<!-- Testimonials Section -->
+<div id="team" class="text-center">
+  <div class="container">
+    <div class="section-title">
+      <h2>Core Team</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div id="testimonial" class="owl-carousel owl-theme">
+          <div class="item"> <img src="{% static 'sdshome/img/Team/levi.png' %}" alt=""/>
+            <p>A young man who considers himself to be an out of the box
+ thinker and likes to approach life in a different way. A passionate
+foodie, die hard swiftie and a comics book fan who is a great listener of music
+and finds time to bring out his creative literature skills. Follow him</p>
+            <p><a href="https://levivaguez.wordpress.com/"><strong>Levi Vaguez</strong></a>, Founder, Team Lead, SDS.<br><a href="https://www.linkedin.com/in/levi11/"><i class="fa fa-linkedin"></i></a>&nbsp<a href="https://twitter.com/lvaguez"><i class="fa fa-twitter"></i></a>&nbsp<a href="https://www.facebook.com/levaguez"><i class="fa fa-facebook"></i></a>&nbsp<a href="https://www.instagram.com/levivaguez11"><i class="fa fa-instagram"></i></a></a></p>
+          </div>
+          <div class="item"> <img src="{% static 'sdshome/img/Team/jesvin.png' %}" alt=""/>
+            <p>I'm Jesvin Jose. I work at Nuventure Technology Solutions
+  in Kaloor as Senior Software Engineer. I've worked in Python web
+  technologies, React and Amazon Web Services.</p>
+            <p><strong>Jesvin Jose</strong>, Team Lead, SDS.<br><a href="#"><i class="fa fa-linkedin"></i></a>&nbsp<a href="#"><i class="fa fa-twitter"></i></a>&nbsp<a href="#"><i class="fa fa-facebook"></i></a></p>
+          </div>
+          <div class="item"> <img src="{% static 'sdshome/img/Team/venkat.png' %}" alt=""/>
+            <p>A system administrator by passion skilled in project management, good speaker, passionate singer.</p>
+            <p><strong>Ganesh Venkat Subramanium</strong>, Team Lead, SDS.<br><a href="#"><i class="fa fa-linkedin"></i></a>&nbsp<a href="#"><i class="fa fa-twitter"></i></a>&nbsp<a href="#"><i class="fa fa-facebook"></i></a></p>
+          </div>
+          <div class="item"> <img src="{% static 'sdshome/img/Team/malavika.png' %}" alt=""/>
+            <p>Howdy, I am Malavika J,BSc Computer Science student at STAS, Edappally
+              A passionate dancer and a trip lover
+            </p>
+            <p><strong>Malavika J</strong>, Team Lead, SDS.<br><a href=""><i class="fa fa-linkedin"></i></a>&nbsp<a href="#"><i class="fa fa-twitter"></i></a>&nbsp<a href="#"><i class="fa fa-facebook"></i></a></p>
+          </div>
+          <!-- <div class="item"> <img src="{% static 'sdshome/img/Team/enfa.png' %}" alt=""/>
+            <p>Just a 18 year old with a head full of ideas and a burning
+  passion to live life to its best. Committed forever to hot coffee, some
+  code and a lot of books. Catch me  on LinkedIn </p>
+            <p><strong>Enfa Rose George</strong>, Team Lead, SDS.<br><a href="https://in.linkedin.com/in/enfa-rose-george-b72481131"><i class="fa fa-linkedin"></i></a>&nbsp<a href="#"><i class="fa fa-twitter"></i></a>&nbsp<a href="#"><i class="fa fa-facebook"></i></a></p>
+          </div> -->
+          <div class="item"> <img src="{% static 'sdshome/img/Team/sreepriya.png' %}" alt=""/>
+            <p>A twenty year old small town girl who wants to live an
+  independent life. A passionate football player, a good listener and an
+  avid reader. Follow me </p>
+            <p><strong>Sreepriya Radakrishnan</strong>, Team Lead, SDS.<br><a href="https://www.linkedin.com/in/sreepriya-radhakrishnan-b08a05147"><i class="fa fa-linkedin"></i></a>&nbsp<a href="#"><i class="fa fa-twitter"></i></a>&nbsp<a href="#"><i class="fa fa-facebook"></i></a></p>
+          </div>
+          <!-- <div class="item"> <img src="{% static 'sdshome/img/Team/ajin.png' %}" alt=""/>
+            <p>21 and in love with code. When I can make some free time, I try and tick another book off my reading list. Hit me up on LinkedIn. </p>
+            <p><strong>Ajin Jude</strong>, Team Lead, SDS.<br><a href="https://linkedin.com/in/ajinjude"><i class="fa fa-linkedin"></i></a>&nbsp<a href="#"><i class="fa fa-twitter"></i></a>&nbsp<a href="#"><i class="fa fa-facebook"></i></a></p>
+          </div> -->
+          <div class="item"> <img src="{% static 'sdshome/img/Team/prejith.png' %}" alt=""/>
+            <p>Currently doing bachelors in Information Technology. A
+  passionate geek who loves anything tech and wishes to venture into the
+  world of Android deeply. A passionate foodie, great listener and a
+  cricket fan. Shoot me a message on LinkedIn</p>
+            <p><strong>Prejith Premkumar</strong>, Team Lead, SDS.<br><a href="https://www.linkedin.com/in/prejith-premkumar/"><i class="fa fa-linkedin"></i></a>&nbsp<a href="#"><i class="fa fa-twitter"></i></a>&nbsp<a href="#"><i class="fa fa-facebook"></i></a></p>
+          </div>
+          <div class="item"> <img src="{% static 'sdshome/img/Team/mufeeda.png' %}" alt=""/>
+            <p>A second-year student who is very passionate about technology and innovation.A person who works for a cause and not for applause
+            </p>
+            <p><strong>Mufeeda C K</strong>, Team Lead, SDS.<br><a href=""><i class="fa fa-linkedin"></i></a>&nbsp<a href="#"><i class="fa fa-twitter"></i></a>&nbsp<a href="#"><i class="fa fa-facebook"></i></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact Section -->
+<div id="contact" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>Get In Touch</h2>
+      <hr>
+      <p>Feel free to drop us a message anytime.</p>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+      <form name="sentMessage" id="contactForm" novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+          <p class="help-block text-danger"></p>
+        </div>
+        <div id="success"></div>
+        <button type="submit" class="btn btn-custom btn-lg">Send Message</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+<div id="contact" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+
+      <h2>Join Us</h2>
+      <hr>
+      <p></p>
+    </div>
+    <div class="social" id="JoinUs">
+      <ul>
+        <li><a href="https://www.meetup.com/StuDevSoc/"><i class="fa fa-meetup"></i></a></li>
+        <li><a href="https://twitter.com/thisissds"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.facebook.com/StuDevSoc"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/studevsoc/"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="https://gitlab.com/studevsoc"><i class="fa fa-gitlab"></i></a></li>
+        <li><a href="https://t.me/studevsoc"><i class="fa fa-telegram"></i></a></li>
+        <li><a href="https://www.instagram.com/studevsoc/"><i class="fa fa-instagram"></i></a></li>
+      </ul>
+    </div>
+
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="container text-center">
+    <p>Copyright &copy; 2018 Web Designed by <a href="" rel="nofollow">StudDevSoc</a></p>
+  </div>
+</div>
+<script type="text/javascript" src="{% static 'sdshome/js/jquery.1.11.1.js' %}"></script>
+<script type="text/javascript" src="{% static 'sdshome/js/bootstrap.js' %}"></script>
+<script type="text/javascript" src="{% static 'sdshome/js/SmoothScroll.js' %}"></script>
+<script type="text/javascript" src="{% static 'sdshome/js/jquery.counterup.js' %}"></script>
+<script type="text/javascript" src="{% static 'sdshome/js/waypoints.js' %}"></script>
+<script type="text/javascript" src="{% static 'sdshome/js/nivo-lightbox.js' %}"></script>
+<script type="text/javascript" src="{% static 'sdshome/js/jquery.isotope.js' %}"></script>
+<script type="text/javascript" src="{% static 'sdshome/js/jqBootstrapValidation.js' %}"></script>
+<script type="text/javascript" src="{% static 'sdshome/js/contact_me.js' %}"></script>
+<script type="text/javascript" src="{% static 'sdshome/js/owl.carousel.js' %}"></script>
+<script type="text/javascript" src="{% static 'sdshome/js/main.js' %}"></script>
+</body>
+</html>
