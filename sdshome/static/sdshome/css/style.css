@@ -248,7 +248,7 @@ ol.type li {
 }
 ol.type li a {
 	color: #C54DAA;
-	padding: 10px 20px;
+	padding: 10px 10px;
 	border: 1px solid #C54DAA;
 	text-transform: uppercase;
 }
@@ -544,4 +544,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c54daa', end
 /* Tab Space*/
 span.tab{
     padding: 0 80px; /* Or desired space*/
+}
+.popup {
+width: 100%;
+height: auto;
+display: block;
+margin-left: auto;
+margin-right: auto;
 }
