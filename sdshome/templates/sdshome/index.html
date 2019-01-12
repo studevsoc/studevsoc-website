@@ -25,6 +25,7 @@
 
 <!-- Slider
     ================================================== -->
+    <link rel="stylesheet" type="text/css"  href="{% static 'sdshome/css/slide.css' %}">
 <link href="{% static 'sdshome/css/owl.carousel.css' %}" rel="stylesheet" media="screen">
 <link href="{% static 'sdshome/css/owl.theme.css' %}" rel="stylesheet" media="screen">
 
@@ -34,6 +35,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'sdshome/css/nivo-lightbox/nivo-lightbox.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'sdshome/css/nivo-lightbox/default.css' %}">
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -68,6 +70,92 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 <!-- Navigation
     ==========================================-->
+    <main class="main-content">
+      <section class="slideshow">
+        <div class="slideshow-inner">
+          <div class="slides">
+            <div class="slide is-active ">
+              <div class="slide-content">
+                <div class="caption">
+                <h4>Welcome to</h4>
+                     <h1 style="font-weight:800;">Student Developers Society</h1>
+                    <h4>A vibrant community of student developers and professionals.<br></h4>
+                  <a href="#about" class="btn">
+                    <span class="btn-inner">Learn More</span>
+                  </a>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="{% static 'sdshome/img/intro-bg.jpg' %}" alt=""  class="image"  />
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-content">
+                <div class="caption">
+                  <div class="title">SDS CODER HUNT </div>
+                  <div class="text">
+                    <p>HUNT ENDED ON 7th Jan</p>
+                  </div>
+                  <a href="https://www.hackerrank.com/sds-coder-hunt" class="btn">
+                    <span class="btn-inner">Learn More</span>
+                  </a>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="{% static 'sdshome/img/slide1.jpeg' %}" alt=""  class="image"  />
+              </div>
+            </div>
+          <!--  <div class="slide">
+              <div class="slide-content">
+                <div class="caption">
+                  <div class="title">Slide title 3</div>
+                  <div class="text">
+                    <p>Slide description 3</p>
+                  </div>
+                  <a href="#" class="btn">
+                    <span class="btn-inner">Learn More</span>
+                  </a>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="https://www.alixbdanthenay.fr/wp-content/uploads/2016/11/11.jpg" alt="" class="image" />
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-content">
+                <div class="caption">
+                  <div class="title">Slide title 4</div>
+                  <div class="text">
+                    <p>Slide description 4</p>
+                  </div>
+                  <a href="#" class="btn">
+                    <span class="btn-inner">Learn More</span>
+                  </a>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="https://www.alixbdanthenay.fr/wp-content/uploads/2016/11/20mars17-sans-typo.jpg" alt="" class="image" />
+              </div>
+            </div>-->
+          </div>
+          <!--<div class="pagination">
+            <div class="item is-active">
+              <span class="icon">1</span>
+            </div>
+            <div class="item">
+              <span class="icon">1</span>
+            </div>
+            <div class="item">
+              <span class="icon">1</span>
+            </div>
+            <div class="item">
+              <span class="icon">1</span>
+            </div>
+          </div>-->
+
+        </div>
+      </section>
+    </main>
 <nav id="menu" class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -93,7 +181,7 @@
   <!-- /.container-fluid -->
 </nav>
 <!-- Header -->
-<header id="header">
+<!--<header id="header">
   <div class="intro">
     <div class="overlay">
       <div class="container">
@@ -106,7 +194,7 @@
       </div>
     </div>
   </div>
-</header>
+</header>-->
 <!-- About Section -->
 <div id="about">
   <div class="container">
@@ -449,10 +537,15 @@ and finds time to bring out his creative literature skills. Follow him</p>
 </div>
 <div id="footer">
   <div class="container text-center">
-    <p>Copyright &copy; 2018 Web Designed by <a href="" rel="nofollow">StudDevSoc</a></p>
+    <p>Copyright &copy; 2019 Web Designed by <a href="https://gitlab.com/Ajuajmal/sds-dynamic/activity" rel="nofollow">StudDevSoc</a></p>
   </div>
 </div>
-<script type="text/javascript" src="{% static 'sdshome/js/jquery.1.11.1.js' %}"></script>
+
+
+<script type="text/javascript" src="{% static 'sdshome/js/slide.js' %}"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
 <script type="text/javascript" src="{% static 'sdshome/js/bootstrap.js' %}"></script>
 <script type="text/javascript" src="{% static 'sdshome/js/SmoothScroll.js' %}"></script>
 <script type="text/javascript" src="{% static 'sdshome/js/jquery.counterup.js' %}"></script>
