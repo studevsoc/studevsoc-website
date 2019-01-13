@@ -25,6 +25,8 @@
 
 <!-- Slider
     ================================================== -->
+    <link rel="stylesheet" type="text/css"  href="{% static 'sdshome/css/loader.css' %}">
+
     <link rel="stylesheet" type="text/css"  href="{% static 'sdshome/css/slide.css' %}">
 <link href="{% static 'sdshome/css/owl.carousel.css' %}" rel="stylesheet" media="screen">
 <link href="{% static 'sdshome/css/owl.theme.css' %}" rel="stylesheet" media="screen">
@@ -67,7 +69,11 @@
 
   </div>
 </div>-->
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" onload="myFunction()" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<!--Loader-->
+<div id="loader"></div>
+
 <!-- Navigation
     ==========================================-->
     <main class="main-content">
@@ -541,6 +547,7 @@ and finds time to bring out his creative literature skills. Follow him</p>
   </div>
 </div>
 
+<script type="text/javascript" src="{% static 'sdshome/js/loader.js' %}"></script>
 
 <script type="text/javascript" src="{% static 'sdshome/js/slide.js' %}"></script>
 
