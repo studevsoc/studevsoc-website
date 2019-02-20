@@ -19,5 +19,6 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('events/',include('events.urls')),
+    path('coc/',include('coc.urls')),
     path('', views.index, name="index"),
 ]
