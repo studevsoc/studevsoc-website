@@ -68,7 +68,23 @@
   <!-- /.container-fluid -->
 </nav>
 
+<div id="contact" >
+<div class="container">
+<div class="text-center">
+    <h1><a href="/">Student Developers Society Code of Conduct</a></h1>
+    <hr>
+</div>
 
+{% for coc in cocs %}
+    <div>
+
+        <h2 >{{ coc.title }}</h2>
+        <p>{{ coc.text|linebreaksbr }}</p>
+        <h6>Last Revision : {{ coc.coc_date }}</h6>
+    </div>
+{% endfor %}
+</div>
+</div>
 <div id="contact" class="text-center">
   <div class="container">
     <div class="section-title center">
@@ -93,6 +109,7 @@
     </div>
   </div>
 </div>
+
 <div id="footer">
   <div class="container text-center">
     <p>  FAQ | <a href="../coc/">Code of Conduct</a> |Report a harassment
