@@ -14,7 +14,7 @@ A django project for sds
   * make virtualenv inside the sds-dynamic folder
   
             * `virtualenv -p python3 env`
-            * `.env/bin/activate` //activate the env
+            * `. env/bin/activate` //activate the env
   * install django 2.1.3
             * `pip3 install Django==2.1.3`
 
