@@ -1,2 +1,6 @@
 # Django (LTS)
 Django==2.2.5
+#strictly separate the settings parameters
+python-decouple
+#safe db url,credentials
+dj-database-url
