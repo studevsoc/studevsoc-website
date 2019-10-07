@@ -23,23 +23,22 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '53uj1r+gw2qn5f(sj361zm5!wazbi^usr2+6@#c11!aft@%!)o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-#WARNING GIT STASH
-ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1','35.154.130.127','studevsoc.com','www.studevsoc.com'] #ip may need to be cleared for changes
+ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1','35.154.130.127']
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'sdshome',
-    'events',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'coc'
 ]
 
 MIDDLEWARE = [
@@ -50,7 +49,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
 ]
 
 ROOT_URLCONF = 'sds.urls'
