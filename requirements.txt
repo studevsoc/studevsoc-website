@@ -1,0 +1,2 @@
+# Django (LTS)
+Django==2.2.5
