@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Create a Post {% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/simplemde.min.css' %}">
+{% endblock %}
+
+{% block javascript %}
+<script src="{% static 'js/simplemde.min.js' %}"></script>
+<script>
+  var simplemde = new SimpleMDE();
+</script>
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h3 class="card-title">Add New Tag</h3>
+      <form method="post" novalidate>
+        {% csrf_token %}
+        {% include 'includes/form.html' %}
+        <button type="submit" class="btn btn-primary btn-block">Add New Tag</button>
+      </form>
+    </div>
+    <div class="card-footer text-muted text-center">
+      Want to create a new post ? <a href="{% url 'new_post' %}">Create New Post</a>
+    </div>
+  </div>
+</div>
+  <main class="mt-5">
+      <div class="container">
+
+{% include 'includes/post_list.html' %}
+
+</div>
+</main>
+
+{% endblock %}

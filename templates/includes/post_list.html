@@ -1,0 +1,32 @@
+<section class="text-center">
+  <h2 class="h1-responsive font-weight-bold text-center my-5">Recent Posts By You (@{{ request.user }})</h2>
+  <!-- Section description -->
+  <p class="text-center w-responsive mx-auto mb-5">Recent Posts which are submitted and under review or published</p>
+  {% for post in posts %}
+  {% if request.user == post.author %}
+
+  <div class="row mb-4 wow fadeIn">
+    {% include 'includes/posts.html' %}
+
+    {% endif %}
+    {% endfor %}
+  </div>
+
+  <h2 class="h1-responsive font-weight-bold text-center my-5">Recent Posts by others</h2>
+  <!-- Section description -->
+  <p class="text-center w-responsive mx-auto mb-5">Recent Posts which are submitted and under review or published</p>
+
+  {% for post in posts %}
+  {% if request.user != post.author %}
+
+  <div class="row mb-4 wow fadeIn">
+    {% include 'includes/posts.html' %}
+
+    {% endif %}
+    {% endfor %}
+  </div>
+
+  <!--Pagination-->
+  <!--Pagination-->
+
+</section>

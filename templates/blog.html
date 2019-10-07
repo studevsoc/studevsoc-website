@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block breadcrumb %}
+{% endblock %}
+{% block content %}
+<main class="mt-5">
+  <div class="container">
+    {% for post in post_list|slice:"1" %}
+    {% if post.feature %}
+    <section class="card wow fadeIn" style="background-image: url({{ post.slidercover.url }});">
+      <div class="card-body text-white text-center py-5 px-5 my-5">
+        <h1 class="mb-4">
+          <strong>{{ post.title}}</strong>
+        </h1>
+        <p>
+          <strong></strong>
+        </p>
+        <p class="mb-4">
+          <strong>{{ post.content|safe|slice:"120" }}...</strong>
+        </p>
+        <a target="_blank" href="{% url 'post_detail' post.slug %}" class="btn btn-outline-white btn-lg">Read More
+          <i class="fas fa-news ml-2"></i>
+        </a>
+      </div>
+    </section>
+    {% endif %}
+    {% endfor %}
+    <br>
+    <div class="row d-flex justify-content-center">
+      {% for post in post_list %}
+      <div class="col-md-6 col-xl-5 mb-4">
+        <div class="view overlay rounded z-depth-2">
+          <img src="{{ post.cover.url }}" class="img-fluid" alt="{{ post.title }}">
+          <a href="{% url 'post_detail' post.slug %}">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <a href="" class="green-text">
+            <h5 class="font-weight-bold mt-2 mb-3"><i class="fas fa-{{ post.blogtype }} pr-2"></i>{{ post.blogtype }}</h5>
+          </a>
+          <h4 class="font-weight-bold mb-3">{{ post.title }}</h4>
+        {{ post.content|safe|slice:"200" }}...<br>
+        <p class="font-weight-normal">by <a href="{% url 'profile' post.author %}"><strong>{{ post.author }}</strong></a>, {{ post.updated_on|date:"d M Y" }}</p>
+
+          <a class="btn btn-success btn-rounded btn-md" href="{% url 'post_detail' post.slug %}"> Read more</a>
+        </div>
+      </div>
+      {% endfor %}
+{% include 'includes/pagination.html' %}
+    </div>
+    <hr class="my-5">
+    <!--- <section class="text-center">
+      <div class="row mb-4 wow fadeIn">
+
+      </div>
+
+    </section>--->
+    <div id="carousel-post-2" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        {% for post in post_list|slice:"4" %}
+        {% if post.sliderpos == 0 }
+        <div class="carousel-item active">
+          <div class="view">
+            <img class="d-block w-100" src="{{ post.slidercover.url }}"
+              alt="First slide">
+              <div class="mask rgba-black-strong"></div>
+          </div>
+          <div class="carousel-caption">
+            <h3 class="h3-responsive">{{ post.title }}</h3>
+            {{ post.content|safe|slice:"50" }}
+          </div>
+        </div>
+        {% if post.sliderpos == 1 %}
+        <div class="carousel-item">
+          <div class="view">
+            <img class="d-block w-100" src="{{ post.slidercover.url }}" alt="First slide">
+            <div class="mask rgba-black-strong"></div>
+          </div>
+          <div class="carousel-caption">
+            <h3 class="h3-responsive">{{ post.title }}</h3>
+            {{ post.content|safe|slice:"50" }}
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+      <a class="carousel-control-prev" href="#carousel-post-2" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel-post-2" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</main>
+{% endblock %}

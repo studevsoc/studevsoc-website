@@ -1,8 +1,11 @@
-from django.url import path,include
-from django.view.generic import ListView, DetailView
-from blog.models import post
+from . import views
+from django.urls import path
 
 urlpatterns = [
-    path('',ListView.as_view(queryser = post.objects.all().order_by("-date")[:25], tempalte_name="blog/blog.html"))
-    path(r'(?P<pk>\d+)$',DetailView.as_view(model=post,template_name='blog/post.html'))
+    path('', views.PostList.as_view(), name='blog'),
+    path('post/new/', views.new_post, name='new_post'),
+    path('post/tag/new', views.new_tag, name='new_tag'),
+    path('post/<slug:slug>/comment/new', views.add_new_comment, name="new_comment"),
+    path('<slug:slug>/', views.PostDetail.as_view(), name ='post_detail'),
+    path('<slug:slug>/edit', views.PostUpdateView.as_view(), name='edit_post')
 ]

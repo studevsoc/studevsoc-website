@@ -1,0 +1,32 @@
+<div class="col-lg-4 col-md-6 mb-4">
+
+  <!--Card-->
+  <div class="card">
+
+    <!--Card image-->
+    <div class="view overlay">
+      <img src="{{ event.cover.url }}" class="card-img-top" alt="">
+      <a href="" target="_blank">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+
+    <!--Card content-->
+    <div class="card-body">
+      <!--Title-->
+      <h4 class="card-title">{{ event.name }}</h4>
+      <!--Text-->
+      <p class="card-text">{{ event.about|safe|slice:"65" }}..</p>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><i class="fas fa-calendar-alt ml-2"></i>
+           {{ event.date|date:" d, M " }} {{ event.enddate|date:"- d, M " }} {{ event.date|date:"Y"}}
+           <i class="fas fa-clock ml-2"></i>{{ event.date|date:" H:i " }} {{ event.enddate|date:"- H:i " }}
+        </li>
+        <li class="list-group-item"><i class="fas fa-map-marked-alt ml-2"></i> <a href="{{ event.maplink }}">{{ event.venue }}</a></li>
+        <li class="list-group-item"><i class="fas fa-globe-asia ml-2"></i> <a href="{{ event.website }}"> Website</a></li>
+      </ul>
+      <div class="card-body">
+        <a href="{% url 'post_detail' event.slug %}" target="_blank" class="btn btn-primary btn-md">More details
+          <i class="fas fa-info-circle ml-2"></i>
+      </a>
+      </div>

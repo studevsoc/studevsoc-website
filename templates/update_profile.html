@@ -1,0 +1,27 @@
+{% extends 'base_accounts.html' %}
+
+{% block title %}Sign up to Student Developers Society{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-8 col-md-10 col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Update Your SDS Profile</h3>
+        <form method="post" novalidate>
+          {% csrf_token %}
+          {% include 'includes/update_form.html' %}
+          <button type="submit" class="btn btn-primary btn-block">Update account</button>
+        </form>
+
+
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <a class="btn btn-primary" href="{% url 'change_password' %}" role="button">Change Password</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

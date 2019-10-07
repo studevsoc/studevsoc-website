@@ -1,0 +1,18 @@
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Hello {{ request.user }}</strong>
+  Now you can add new Tags and Blog Categories for your great post.
+  First add tags and category
+  (only when,  if you need new tags and categories else you can use defined tags and categories)
+  and enter contents after that.
+  For selecting multiple tags use Ctrl key while writing posts from PC.
+  <br>
+  <center>
+  <a href="{% url 'new_tag' %}"><i class="fas fa-tag"> Add New Tag</i></a>
+  <br>
+  <a href="{% url 'new_tag' %}"><i class="fas fa-file"> Add New BlogType</i></a>
+  </center>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+
+</div>
