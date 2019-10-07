@@ -1,4 +1,9 @@
-# Django (LTS)
+django-widget-tweaks
+#widget_tweaks
+django-ckeditor
+#ckeditor
+Pillow
+#Django(LTS)
 Django==2.2.5
 #strictly separate the settings parameters
 python-decouple

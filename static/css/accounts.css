@@ -1,0 +1,14 @@
+body {
+  background-image: url(../img/email-pattern.png);
+}
+.logo {
+}
+
+.logo a{
+  color: rgba(0,0,0,.9);
+}
+
+.logo a:hover,
+.logo a:active {
+  text-decoration: none;
+}

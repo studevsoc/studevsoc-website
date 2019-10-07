@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Edit post{% endblock %}
+
+{% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/simplemde.min.css' %}">
+{% endblock %}
+
+{% block javascript %}
+  <script src="{% static 'js/simplemde.min.js' %}"></script>
+  <script>
+    var simplemde = new SimpleMDE();
+  </script>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Hello {{ request.user }}</strong>
+WARNING ! : by editing and saving this post, post will moved to draf section .
+
+
+  <br>
+  <center>
+
+  <center>
+  <a href="{% url 'new_post' %}"><i class="fas fa-plus-square"> Add New Post</i></a>
+  </center>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+
+</div>
+{% if post.author == request.user or request.user.is_superuser %}
+{% include 'includes/post_notification.html' %}
+<div class="container">
+  <form method="post" class="mb-4" novalidate>
+    {% csrf_token %}
+    {% include 'includes/form.html' %}
+    <button type="submit" class="btn btn-success">Save Changes</button>
+  </form>
+</div>
+
+{% endif %}
+
+{% endblock %}

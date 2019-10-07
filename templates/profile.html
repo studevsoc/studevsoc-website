@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+{% endblock %}
+{% block content %}
+
+
+<div class="container emp-profile">
+  <form method="post">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="profile-img">
+          <img src="{{ user_pro.profile.profile.url }}" alt="" />
+          {% if user_pro == request.user %}
+
+          {% else %}
+          <br><br>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="profile-head">
+          <h5>
+            {{ user_pro.first_name }} {{ user_pro.last_name }}
+          </h5>
+          <h5 class="text-muted">@{{ user_pro.username }}<br></h5>
+
+          <div class="pb-4">
+            <a href="{{ user_pro.profile.facebook }}" class="fb-ic mr-3" role="button"><i class="fab fa-lg fa-facebook-f"></i></a>
+
+            <a href="{{ user_pro.profile.twitter }}" class="tw-ic mr-3" role="button"><i class="fab fa-lg fa-twitter"></i></a>
+
+            <a href="{{ user_pro.profile.linkedin }}" class="li-ic mr-3" role="button"><i class="fab fa-lg fa-linkedin-in"></i></a>
+
+            <a href="{{ user_pro.profile.instagram }}" class="ins-ic mr-3" role="button"><i class="fab fa-lg fa-instagram"></i></a>
+
+            <a href="{{ user_pro.profile.stackoverflow }}" class="so-ic mr-3" role="button"><i class="fab fa-lg fa-stack-overflow"></i></a>
+
+
+            <a href="{{ user_pro.profile.github }}" class="git-ic mr-3" role="button"><i class="fab fa-lg fa-github"></i></a>
+
+
+          </div>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Bio</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="profile-work">
+          <p>WORK LINK</p>
+
+          <p>SKILLS</p>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="tab-content profile-tab" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="row">
+              <div class="col-md-6">
+                <label>User Id</label>
+              </div>
+              <div class="col-md-6">
+                <p>Kshiti123</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label>Name</label>
+              </div>
+              <div class="col-md-6">
+                <p>Kshiti Ghelani</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label>Email</label>
+              </div>
+              <div class="col-md-6">
+                <p>kshitighelani@gmail.com</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label>Phone</label>
+              </div>
+              <div class="col-md-6">
+                <p>123 456 7890</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label>Profession</label>
+              </div>
+              <div class="col-md-6">
+                <p>Web Developer and Designer</p>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="row">
+              <div class="col-md-12">
+                <label>Bio</label><br />
+                <p>{{ user_pro.profile.bio }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <section class="text-center">
+
+    <!--Grid row-->
+
+    <!--Grid row-->
+<hr class="my-5">
+    <!--Grid row-->
+    <div class="row mb-4 wow fadeIn">
+
+      <!--Grid column-->
+
+      <h2 class="black-text font-weight-bold text-center w-responsive mx-auto mb-5">Blogs by {{ user_pro.username }}</h2>
+
+      <p class="grey-text text-center w-responsive mx-auto mb-5">Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit est laborum.</p>
+      <!--Grid column-->
+      {% for post in posts %}
+        {% if post.author == user_pro and post.status == 1 %}
+      <div class="col-lg-4 col-md-6 mb-4">
+        <!--Card-->
+        <div class="card">
+
+          <!--Card image-->
+          <div class="view overlay">
+            <img src="https://mdbootstrap.com/img/Marketing/mdb-press-pack/mdb-react.jpg" class="card-img-top" alt="">
+            <a href="https://mdbootstrap.com/react/" target="_blank">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+
+          <!--Card content-->
+          <div class="card-body">
+            <!--Title-->
+            <h4 class="card-title">{{ post.title }}</h4>
+            <!--Text-->
+            <p class="card-text">Based on the latest Bootstrap 4 and React 16. </p>
+            <a href="{% url 'post_detail' post.slug %}" target="_blank" class="btn btn-primary btn-md">Free download
+              <i class="fas fa-download ml-2"></i>
+            </a>
+          </div>
+
+        </div>
+        <!--/.Card-->
+
+      </div>
+        {% endif %}
+      {% endfor %}
+      <!--Grid column-->
+
+      <!--Grid column-->
+
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+
+    <!--Pagination-->
+  {% include 'includes/pagination.html' %}
+    <!--Pagination-->
+
+  </section>
+</div>
+
+{% endblock %}

@@ -1,0 +1,8 @@
+.navbar-brand{
+  font-family: 'Pacifico', cursive;
+  }
+  /* Icon 1 */
+  .carousel-caption h5,h3 {
+      color: black;
+  }
+.card-comments img{width:4rem}
