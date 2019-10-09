@@ -5,7 +5,7 @@ from .models import Jumbotron, Project, Contact
 from blog.models import Post
 from django.utils import timezone
 from .forms import ContactForm
-
+from django.contrib import messages
 # Home Page for SDS
 def homeviews(request):
     posts = Jumbotron.objects.filter(status=1).order_by('-updated_on')
@@ -18,7 +18,10 @@ def homeviews(request):
             connect.sds_response = 0
             connect.date = timezone.now()
             connect.save()
+            messages.success(request, 'Submited successfully')
             return redirect('home')
+        else:
+            messages.error(request,'Invalid Data<br>Please Input valid data , Check all the fields one more time')
     else:
         form = ContactForm()
     context = {'posts': posts,'features':features,'projects':projects,'form':form}

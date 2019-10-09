@@ -5,16 +5,40 @@
 {% block content %}
 
 <div class="container">
-
+  <!-- Get in touch form messages -->
+  {% if messages %}
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          {% for message in messages %}
+          <h4 class="modal-title w-100" id="myModalLabel">Status</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          {{ message|safe }}
+        </div>
+        {% endfor %}
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" onclick=" connect_contact()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  <!-- END: Get in touch form messages -->
   <!-- Jumbotron Header -->
   <div class="wow fadeIn">
 
-  <header style="background-color:#fff !important"class="jumbotron my-4 hoverable">
+    <header style="background-color:#fff !important" class="jumbotron my-4 hoverable">
 
-    <h1 class="display-3">Welcome</h1>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Molestie nunc non blandit massa enim nec. Rutrum quisque non tellus orci ac auctor augue. Lobortis mattis aliquam faucibus purus in. Sed egestas egestas fringilla phasellus. Orci a scelerisque purus semper eget duis at tellus at. Orci nulla pellentesque dignissim enim</p>
-  </header>
-</div>
+      <h1 class="display-3">Welcome</h1>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Molestie nunc non blandit massa enim nec. Rutrum quisque non tellus orci ac auctor augue. Lobortis
+        mattis aliquam faucibus purus in. Sed egestas egestas fringilla phasellus. Orci a scelerisque purus semper eget duis at tellus at. Orci nulla pellentesque dignissim enim</p>
+    </header>
+  </div>
   <div class="badge badge-primary text-wrap" style="">
     Recent Updates</div>
   <!-- Page Features -->
@@ -23,40 +47,40 @@
     {% for feature in features %}
 
     <div class="wow fadeIn">
-    <!-- News jumbotron -->
-    <div style="background-color:#fff !important" class="jumbotron text-center hoverable p-4">
-      <!-- Grid row -->
-      <div class="row">
+      <!-- News jumbotron -->
+      <div style="background-color:#fff !important" class="jumbotron text-center hoverable p-4">
+        <!-- Grid row -->
+        <div class="row">
 
-        <!-- Grid column -->
-        <div class="col-md-4 offset-md-1 mx-3 my-3">
+          <!-- Grid column -->
+          <div class="col-md-4 offset-md-1 mx-3 my-3">
 
-          <!-- Featured image -->
-          <div class="view overlay">
-            <img src="{{ feature.cover.url }}" class="img-fluid" alt=" image for first version of blog listing">
-            <a>
-              <div class="mask rgba-white-slight"></div>
-            </a>
+            <!-- Featured image -->
+            <div class="view overlay">
+              <img src="{{ feature.cover.url }}" class="img-fluid" alt=" image for first version of blog listing">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+
           </div>
+          <div class="col-md-7 text-md-left ml-3 mt-3">
 
-        </div>
-        <div class="col-md-7 text-md-left ml-3 mt-3">
+            <!-- Excerpt -->
+            <a href="#!" class="green-text">
+              <h6 class="h6 pb-1"><i class="fas fa-{{ feature.blogtype }} pr-1"></i>{{ feature.blogtype }}</h6>
+            </a>
 
-          <!-- Excerpt -->
-          <a href="#!" class="green-text">
-            <h6 class="h6 pb-1"><i class="fas fa-{{ feature.blogtype }} pr-1"></i>{{ feature.blogtype }}</h6>
-          </a>
+            <h4 class="h4 mb-4">{{ feature.title }}</h4>
 
-          <h4 class="h4 mb-4">{{ feature.title }}</h4>
+            <p class="font-weight-normal">{{ feature.content|safe|slice:"500" }}</p>
+            <p class="font-weight-normal">by <a><strong>{{ feature.author }}</strong></a>, {{ feature.updated_on }}</p>
 
-          <p class="font-weight-normal">{{ feature.content|safe|slice:"500" }}</p>
-          <p class="font-weight-normal">by <a><strong>{{ feature.author }}</strong></a>, {{ feature.updated_on }}</p>
-
-          <a href="{% url 'post_detail' feature.slug %}" class="btn btn-success">Read more</a>
+            <a href="{% url 'post_detail' feature.slug %}" class="btn btn-success">Read more</a>
+          </div>
         </div>
       </div>
     </div>
-</div>
     {% endfor %}
 
 
@@ -103,54 +127,58 @@
   <!--Section: Contact v.2-->
   <section class="mb-4">
 
-      <!--Section heading-->
-      <h2 class="h1-responsive font-weight-bold text-center my-4">Reach us</h2>
-      <!--Section description-->
-      <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-          a matter of hours to help you.</p>
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Reach us</h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+      a matter of hours to help you.</p>
 
-      <div id='contact' class="row">
+    <div id='contact' class="row">
 
-          <!--Grid column-->
-          <div class="col-md-9 mb-md-0 mb-5">
-              <form id="contact-form" name="contact-form" method="POST" novalidate>
+      <!--Grid column-->
+      <div class="col-md-9 mb-md-0 mb-5">
+        <form id="contact-form" name="contact-form" method="POST" novalidate>
 
-                {% csrf_token %}
-                {% include 'includes/form.html' %}
-                <button type="submit" class="btn btn-success">Send</button>
-                  <!--Grid row-->
+          {% csrf_token %}
+          {% include 'includes/form.html' %}
+          <button type="submit" class="btn btn-success">Send</button>
+          <!--Grid row-->
 
-              </form>
+        </form>
 
-              <div class="text-center text-md-left">
+        <div class="text-center text-md-left">
 
-              </div>
-              <div class="status"></div>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-md-3 text-center">
-              <ul class="list-unstyled mb-0">
-                  <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                      <p>SDS , Cochin </p>
-                  </li>
-
-                  <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                      <p>+ 91 *** *** ****</p>
-                  </li>
-
-                  <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                      <p>contact@studevsoc.com</p>
-                  </li>
-              </ul>
-          </div>
-          <!--Grid column-->
-
+        </div>
+        <div class="status"></div>
       </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-md-3 text-center">
+        <ul class="list-unstyled mb-0">
+          <li><i class="fas fa-map-marker-alt fa-2x"></i>
+            <p>SDS , Cochin </p>
+          </li>
+
+          <li><i class="fas fa-phone mt-4 fa-2x"></i>
+            <p>+ 91 *** *** ****</p>
+          </li>
+
+          <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+            <p>contact@studevsoc.com</p>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+    </div>
 
   </section>
 </div>
 
 
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/home.js' %}"></script>
 {% endblock %}
